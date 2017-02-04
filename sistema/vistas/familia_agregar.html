@@ -1,0 +1,236 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h3 class="page-header">Agregar Familiar:</h3>
+        <div class="alert alert-{TIPO_MENSAJE} alert-dismissable" style="display: none;">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+           {MENSAJE}.
+        </div>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <strong>Jefe de Familiar:</strong>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form role="form" id='form_validacion' method='POST'  action="{RAIZ_LINK}formulario/familiar">
+                            <div class="col-lg-12">
+                                <h4 class="text-success head-form">V.- Características del Familiar</h4>
+                                <input type='hidden' name='id_familia' value='{id_familia}'>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Nombres <span class="text-danger">*</span></label>
+                                        <input class="form-control" name='nombre' placeholder="Ingrese el nombre">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Apellidos <span class="text-danger">*</span></label>
+                                        <input class="form-control" name='apellido' placeholder="Ingrese el apellido">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Numero de Cedula <span class="text-danger">*</span></label>
+                                        <input class="form-control" name='cedula' placeholder="Ingrese su cedula">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Parentesco con:<span class="text-danger">*</span></label>
+                                        <select name='parentesco'class="form-control">
+                                            <option value=''>Seleccione el parentesco</option>
+                                            <option value="ABUELO(A)" >ABUELO(A)</option>
+                                            <option value="CUÑADO(A)" >CUÑADO(A)</option>
+                                            <option value="DESCONOCIDO/SIN ESPECIFICAR" >DESCONOCIDO/SIN ESPECIFICAR</option>
+                                            <option value="ESPOSO(A)" >ESPOSO(A)</option>
+                                            <option value="FAMILIAR LEJANO (3er. GRADO)" >FAMILIAR LEJANO (3er. GRADO)</option>
+                                            <option value="HERMANO(A)" >HERMANO(A)</option>
+                                            <option value="HIJO(A)" >HIJO(A)</option>
+                                            <option value="NIETO(A)" >NIETO(A)</option>
+                                            <option value="NINGUNO" >NINGUNO</option>
+                                            <option value="NUERA/YERNO" >NUERA/YERNO</option>
+                                            <option value="PAPA/MAMA" >PAPA/MAMA</option>
+                                            <option value="PRIMO(A)" >PRIMO(A)</option>
+                                            <option value="SOBRINO(A)" >SOBRINO(A)</option>
+                                            <option value="SUEGRO(A)" >SUEGRO(A)</option>
+                                            <option value="TIO(A)" >TIO(A)</option>
+                                            <option value="VECINO(A)" >VECINO(A))</option>
+                                            <option value="CONOCIDO(A)" >CONOCIDO(A)</option>
+                                            <option value="AMIGO(A)" >AMIGO(A)</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Nacionalidad <span class="text-danger">*</span></label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="nacionalidad" id="nacionalidad1" value="Venezolano">Venezolano
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="nacionalidad" id="nacionalidad2" value="Extrangero">Extrangero
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Fecha de Nacimiento <span class="text-danger">*</span></label>
+                                        <input class="form-control datepicker" name='fecha_nacimiento' placeholder="Dia-Mes-Año">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>¿Esta inscrito en el CNE?</label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="cne" id="cne1" value="Si">Si
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="cne" id="cne2" value="No">No
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>¿cuanto timpo tiene en la comunidad?</label>
+                                        <input class="form-control" name='tiempo_comunidad' placeholder="Ingrese el tiempo que tiene en la comunidad">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Sexo <span class="text-danger">*</span></label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="sexo" id="sexo1" value="Femenino">Femenino
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="sexo" id="sexo2" value="Masculino">Masculino
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>¿Tiene Discapacidad?</label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="discapacidad" id="discapacidad1" value="Si">Si
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="discapacidad" id="discapacidad2" value="No">No
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Tipo de discapacidad</label>
+                                        <input class="form-control" name='tipo_discapacidad' placeholder="Ingrese el nombre de la discapacidad">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>¿Esta pensionado?</label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="pension" id="pension1" value="Si">Si
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="pension" id="pension2" value="No">No
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Intitucion</label>
+                                        <input class="form-control" name='institucion_nombre' placeholder="Ingrese el nombre la institucion">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Celular <span class="text-danger">*</span></label>
+                                        <input class="form-control" name='celular' placeholder="Ingrese su numero de celular">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Correo Electronico</label>
+                                        <input class="form-control" name='correo' placeholder="Ingrese su correo electronico">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Estado civil <span class="text-danger">*</span></label>
+                                        <select name='estado_civil'class="form-control">
+                                            <option value=''>Seleccione estado civil</option>
+                                            <option value="Soltero(a)">Soltero(a)</option>
+                                            <option value="Casado(a)">Casado(a)</option>
+                                            <option value="Divorciado(a)">Divorciado(a)</option>
+                                            <option value="Viudo(a)">Viudo(a)</option>
+                                            <option value="Concubino(a)">Concubino(a)</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Nivel de Instruccion <span class="text-danger">*</span></label>
+                                        <select name='nivel_instruccion'class="form-control">
+                                            <option value=''>Seleccione nivel de instruccion</option>
+                                            <option value="Sin instruncion">Sin instruncion</option>
+                                            <option value="Basica">Basica</option>
+                                            <option value="Bachiller">Bachiller</option>
+                                            <option value="Tecnico Medio">Tecnico Medio</option>
+                                            <option value="Tecnico Superior">Tecnico Superior</option>
+                                            <option value="Universitario">Universitario</option>
+                                            <option value="Post Grado">Post Grado</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Pofecion/Oficio</label>
+                                        <input class="form-control" name='oficio' placeholder="Ingrese su pofecion u oficio">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>¿Trabaja Actualmente?</label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="trabaja" id="trabaja1" value="Si">Si
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="trabaja" id="trabaja2" value="No">No
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>¿Donde Trabaja?</label>
+                                        <input class="form-control" name='lugar_trabajo' placeholder="Ingrese la cantidad mensual">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Ingreso Mensual Bs.</label>
+                                        <input class="form-control" name='ingreso_mensual' placeholder="Ingrese la cantidad mensual">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Padece de:</label>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name='cancer' value="Cáncer">Cáncer
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name='diabetes' value="Diabetes">Diabetes
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name='sida' value="SIDA">SIDA
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name='tuberculosis' value="Tuberculosis">Tuberculosis
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name='hipertension' value="Hipertensión">Hipertensión
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name='asma' value="Asma">Asma
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Otras enfermedades:</label>
+                                        <textarea name='otra_enfermedad'class="form-control" rows="2"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Necesita ayuda para la enfermedad:</label>
+                                        <textarea name='ayuda_enfermedad'class="form-control" rows="2"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <button type="submit" class="btn btn-success btn-lg btn-block">Guardar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.col-lg-6 (nested) -->
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->

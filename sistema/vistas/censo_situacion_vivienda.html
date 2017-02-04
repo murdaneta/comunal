@@ -1,0 +1,387 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h3 class="page-header">Censar</h3>
+        <div class="alert alert-{TIPO_MENSAJE} alert-dismissable" style="display: none;">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+           {MENSAJE}.
+        </div>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <strong>Estudio Demografico y Socio-Economico</strong>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form role="form" id='form_validacion' method='POST'  action="{RAIZ_LINK}formulario/situacion_vivienda">
+                        	<div class="col-lg-12">
+                                <h4 class="text-success head-form">III.- Situacion de la vivienda</h4>
+                                <input type='hidden' name='id_familia' value='{id_familia}'>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Numero de casa/apartameto/Habitación</label>
+                                        <input class="form-control" name='numero_vivienda' placeholder="Ingrese el numero de la vivienda">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Condiciones del Terreno?</label>
+                                        <select name='condicion' class="form-control">
+                                            <option value=''>Seleccione la condicion</option>
+                                            <option value="Estable">Estable</option>
+                                            <option value="Inestable">Inestable</option>
+                                            <option value="Alto Riesgo">Alto Riesgo</option>
+                                            <option value="Vulnerable">Vulnerable</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Forma de Tenencia?</label>
+                                        <select name='tenencia' class="form-control">
+                                            <option value=''>Seleccione la Tenencia</option>
+                                            <option value="Propia">Propia</option>
+                                            <option value="Alquilada">Alquilada</option>
+                                            <option value="Compartida">Compartida</option>
+                                            <option value="Invadida">Invadida</option>
+                                            <option value="Traspasada">Traspasada</option>
+                                            <option value="Prestada">Prestada</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Tipo de Vivienda?</label>
+                                        <select name='tipo_vivienda' class="form-control">
+                                            <option value=''>Seleccione el tipo de vivienda</option>
+                                            <option value="Quinta">Quinta</option>
+                                            <option value="Casa">Casa</option>
+                                            <option value="Apartamento">Apartamento</option>
+                                            <option value="Rancho">Rancho</option>
+                                            <option value="Barraca">Barraca</option>
+                                            <option value="Habitacion o Anexo">Habitacion o Anexo</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Habitaciones de la vivienda</label>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='sala_habitacion' type="checkbox" value="Sala">Sala
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='comedor_habitacion' type="checkbox" value="Comedor">Comedor
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='cocina_habitacion' type="checkbox" value="Cocina">Cocina
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='bano_habitacion' type="checkbox" value="Baño">Baño
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Cantidad de Habitaciones</label>
+                                        <input class="form-control" name='cantidad_habitaciones' placeholder="Ingrese la cantidad mensual">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Pertenece usted a una OCV?</label>
+                                        <div class='radio'>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="OCV" id="OCV1" value="Si">Si
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="OCV" id="OCV2" value="No">No
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Terreno Propio?</label>
+                                        <div class='radio'>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="terreno_propio" id="terreno_propio1" value="Si">Si
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="terreno_propio" id="terreno_propio2" value="No">No
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Tipo de Paredes</label>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='frisadas' type="checkbox" 
+                                                value="Frisadas">Frisadas
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='sin_frisar' type="checkbox" 
+                                                value="Sin Frisar">Sin Frisar
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='tablas' type="checkbox" 
+                                                value="Tablas">Tablas
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='bahareque' type="checkbox" 
+                                                value="Bahareque o Doble">Bahareque o Doble
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='zinc_paredes' type="checkbox" 
+                                                value="Zinc">Zinc
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='carton_Piedra' type="checkbox" 
+                                                value="Carton Piedra">Carton Piedra
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Tipo de Techo?</label>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='platabanda' type="checkbox" 
+                                                value="Platabanda">Platabanda
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='asbesto' type="checkbox" 
+                                                value="Asbesto">Asbesto
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='teja' type="checkbox" 
+                                                value="Teja">Teja
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='zinc_techo' type="checkbox" 
+                                                value="Zinc">Zinc
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='machihembrado' type="checkbox" 
+                                                value="Machihembrado">Machihembrado
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='techo_raso' type="checkbox" 
+                                                value="Techo Raso">Techo Raso
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Está inscrita en el SIVIH?</label>
+                                        <div class='radio'>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="SIVIH" id="SIVIH1" value="Si">Si
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="SIVIH" id="SIVIH2" value="No">No
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Constancia de Inscripción</label>
+                                        <input class="form-control" name='constancia_inscripcion' placeholder="Ingrese la cantidad mensual">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Cotiza ley de Política Habitaciona</label>
+                                        <div class='radio'>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="cotiza_ley_habitacional" id="cotiza_ley_habitacional1" value="Si">Si
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="cotiza_ley_habitacional" id="cotiza_ley_habitacional2" value="No">No
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Enseres de la Vivienda?</label>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='nevera' type="checkbox" 
+                                                value="Nevera">Nevera
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='cocina' type="checkbox" 
+                                                value="Cocina">Cocina
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='gabinete' type="checkbox" 
+                                                value="Gabinete">Gabinete
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='camas' type="checkbox" 
+                                                value="Camas">Camas
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='aire' type="checkbox" 
+                                                value="Aire Acondicionado">Aire Acondicionado
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='ventilador' type="checkbox" 
+                                                value="Ventilador">Ventilador
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='juego_comedor' type="checkbox" 
+                                                value="Juego de Comedor">Juego de Comedor
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='muebles_sala' type="checkbox" 
+                                                value="Muebles de Sala"> Muebles de Sala
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='utensilios_cocina' type="checkbox" 
+                                                value="Utensilios de Cocina"> Utensilios de Cocina
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='tv' type="checkbox" 
+                                                value="T.V.">T.V.
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Condiciones de Salubridad de la Vivienda</label>
+                                        <div class='radio'>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="slubridad_vivienda" id="slubridad_vivienda1" value="Limpia">Limpia
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="slubridad_vivienda" id="slubridad_vivienda2" value="Sucia">Sucia
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="slubridad_vivienda" id="slubridad_vivienda3" value="Media Limpia">Media Limpia
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Qué tipo de ayuda necesitas para mejorar tu casa</label>
+                                        <div class='radio'>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="ayuda_mejora" id="ayuda_mejora1" 
+                                                value="Rehabilitación">Rehabilitación
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="ayuda_mejora" id="ayuda_mejora2" 
+                                                value="Sustitución">Sustitución
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Presencia de Insectos y Roedores?</label>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='moscas' type="checkbox" value="Moscas">Moscas
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='hormigas' type="checkbox" value="Hormigas">Hormigas
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='ratones' type="checkbox" value="Ratones">Ratones
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='cucarachas' type="checkbox" value="Cucarachas">Cucarachas
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='ciempies' type="checkbox" value="Ciempiés">Ciempiés
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Tienes Animales Domésticos en la vivienda?</label>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='perro' type="checkbox" value="Perro">Perro
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='gato' type="checkbox" value="Gato">Gato
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='pajaros' type="checkbox" value="Pájaros">Pájaros
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='gallinas' type="checkbox" value="Gallinas">Gallinas
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='patos' type="checkbox" value="Patos">Patos
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='cochinos' type="checkbox" value="Cochinos">Cochinos
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <button type="submit" class="btn btn-success btn-lg btn-block">Guardar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.col-lg-6 (nested) -->
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->

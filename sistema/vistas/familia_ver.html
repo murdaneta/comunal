@@ -1,0 +1,45 @@
+
+<div class="row">
+    <div class="col-lg-12">
+		
+		<h3 class="page-header">Familiaraes del jefe de familia: 
+			<a href="{RAIZ_LINK}?habitante={id_jefe}">
+				{nombre_jefe} {apellido_jefe}
+			</a><i class="fa fa-eye fa-fw"></i>
+		</h3>
+
+        <div class="alert alert-{TIPO_MENSAJE} alert-dismissable" style="display: none;">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+           {MENSAJE}.
+        </div>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+	<div class="col-lg-12">
+		<div class="btn-group " role="group" aria-label="...">
+		  <a href="{RAIZ_LINK}?familiar_agregar={id_familia}" class="btn btn-primary">
+		  	<i class="fa fa-plus fa-fw"></i>
+		  	Agregar Familiar
+		  </a>
+
+		</div>
+    	<div class="btn-group pull-right" role="group" aria-label="...">
+		  <a href="{RAIZ_LINK}?vivienda={id_vivienda}"type="button" class="btn btn-default">
+		  	<i class="fa fa-home fa-fw"></i>
+		  	Vivienda
+		  </a>
+		</div>
+	</div>
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="list-group">
+                    {list_familiares}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>

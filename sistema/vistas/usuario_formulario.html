@@ -1,0 +1,66 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h3 class="page-header">Creando un usuario</h3>
+        <div class="alert alert-{TIPO_MENSAJE} alert-dismissable" style="display: none;">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+           {MENSAJE}.
+        </div>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<div class="row">
+    <div class="col-lg-6 col-md-6 col-xs-9 col-md-offset-3 col-xs-offset-2">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <strong>Datos Basicos</strong>
+            </div>
+            <div class="panel-body">
+            	<form role="form" id='form_validacion_user' method='POST'  action="{RAIZ_LINK}usuarios/guardar">
+                    <div class="form-group">
+                        <label>Correo electronico</label>
+                        <input class="form-control" name="correo" placeholder="Ingresa el Correo Electronico">
+                    </div>
+                    <div class="form-group">
+                        <label>Correo electronico(alternativo)</label>
+                        <input class="form-control" name='correo_alternativo' placeholder="Ingresa el Correo Electronico">
+                    </div>
+                    <div class="form-group">
+                        <label>Tipo de Usuario</label>
+                        <select name='tipo_usuario' class="form-control">
+                            <option></option>
+                            <option value='Pricipal'>Pricipal</option>
+                            <option value='Secundario'>Secundario</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Contreceña</label>
+                        <input type="password" name='clave' id='clave'class="form-control" placeholder="Ingresa la Contreceña">
+                    </div>
+                    <div class="form-group">
+                        <label>Confirma tu Contreceña</label>
+                        <input type="password" name='clave_confirmacion' class="form-control" placeholder="Ingresa la Contreceña Nuevamente">
+                    </div>
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input class="form-control" name='nombre' placeholder="Ingresa el Nombre">
+                    </div>
+                    <div class="form-group">
+                        <label>Apellido</label>
+                        <input class="form-control" name='apellido' placeholder="Ingresa el Apellido">
+                    </div>
+                    <div class="form-group">
+                        <label>Cedula</label>
+                        <input class="form-control" name='cedula' placeholder="Ingresa el Numero de Cedula">
+                    </div>
+                    <div class="form-group">
+                        <label>Fecha de Nacimiento</label>
+                        <input class="form-control datepicker" name='fecha_nacimiento' placeholder="Ingresa la fecha de Nacimiento">
+                    </div>
+                    <button type="submit" class="btn btn-success">Gruardar</button>
+                    <button type="reset" class="btn btn-warning">Linpiar</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

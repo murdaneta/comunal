@@ -1,0 +1,286 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h3 class="page-header">Censar</h3>
+        <div class="alert alert-{TIPO_MENSAJE} alert-dismissable" style="display: none;">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+           {MENSAJE}.
+        </div>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <strong>Estudio Demografico y Socio-Economico</strong>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form role="form" id='form_validacion' method='POST'  action="{RAIZ_LINK}formulario/servicios">
+                            <div class="col-lg-12">
+                                <h4 class="text-success head-form">IV.- Servicios</h4>
+                                 <input type='hidden' name='id_vivienda' value='{id_vivienda}'>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Aguas Blancas</label>
+                                        <div class='radio'>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="aguas_blancas" id="aguas_blancas1" value="Acueducto">Acueducto
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="aguas_blancas" id="aguas_blancas2" value="Camión">Camión
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="aguas_blancas" id="aguas_blancas3" value="Pila pública">Pila pública
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="aguas_blancas" id="aguas_blancas4" value=" Del río"> Del río
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Tiene Tanque?</label>
+                                        <div class='radio'>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="tanque" id="tanque1" value="Si">Si
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="tanque" id="tanque2" value="No">No
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Tiene Pipotes?</label>
+                                        <div class='radio'>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="pipotes" id="pipotes1" value="Si">Si
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="pipotes" id="pipotes2" value="No">No
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Tiene Medidor de Agua?</label>
+                                        <div class='radio'>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="medidor_agua" id="medidor_agua1" value="Si">Si
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="medidor_agua" id="medidor_agua2" value="No">No
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Telefonía</label>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='domiciliaria_servicio' type="checkbox" value="Domiciliaria">Domiciliaria
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='celular_servicio' type="checkbox" value="Celular">Celular
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='prepago_servicio' type="checkbox" value="Prepago">Prepago
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='centro_conexion' type="checkbox" value="Centro de conexión">Centro de conexión
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Aguas Servida</label>
+                                        <select name='agua_servida' class="form-control">
+                                            <option value=''>Seleccione..</option>
+                                            <option value="Cloacas">Cloacas</option>
+                                            <option value="Pozo séptico">Pozo séptico</option>
+                                            <option value="Letrinas">Letrinas</option>
+                                            <option value="Al aire libre">Al aire libre</option>
+                                            <option value="Depositada en bolsas">Depositada en bolsas</option>
+                                            <option value="Otros">Otros</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Tramsporte</label>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='propio_transporte'type="checkbox" value="Propio">Propio
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='publico_transporte'type="checkbox" value="Público">Público
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='bestias_transporte'type="checkbox" value="Bestias">Bestias
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='privado_transporte'type="checkbox" value="Privado(taxi)">Privado(taxi)
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='otros_transporte'type="checkbox" value="Otros">Otros
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Gas</label>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='bombona' type="checkbox" value="Bombona">Bombona
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='tuberia' type="checkbox" value="Tubería">Tubería
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='no_posee' type="checkbox" value="No Posee">No Posee
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>                                
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Mecanismo de Informacion</label>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='television' type="checkbox" value="Televisión">Televisión
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='radio' type="checkbox" value="Radio">Radio
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='prensa' type="checkbox" value="Prensa">Prensa
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='internet' type="checkbox" value="Internet">Internet
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='alternativo' type="checkbox" value="Medios Alternativos Comunitarios">Medios Alternativos Comunitarios
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='otros_mecanismo' type="checkbox" value="Otros">Otros
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Sistema Eléctrico</label>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='publico_electricidad' type="checkbox" value="Público">Público
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='planta_electrica' type="checkbox" value="Planta Eléctrica Propia">Planta Eléctrica Propia
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Tiene Medidor Eléctrico?</label>
+                                        <div class='radio'>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="medidor_electrico" id="medidor_electrico1" value="Si">Si
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="medidor_electrico" id="medidor_electrico2" value="No">No
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Tiene Bonbillo Ahorradores?</label>
+                                        <div class='radio'>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="bombillos_ahorradores" id="bombillos_ahorradores1" value="Si">Si
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="bombillos_ahorradores" id="bombillos_ahorradores2" value="No">No
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Cuantos Bombillos Necesita</label>
+                                        <input class="form-control" name='cantidad_bombillos_necesarios' placeholder="Ingrese la cantidad de bombillos">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Recolección de Basura</label>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='aseo_urbano' type="checkbox" value="Aseo Urbano">Aseo Urbano
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='contaner' type="checkbox" value="Container">Container
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='bajante' type="checkbox" value="Bajante">Bajante
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='camion' type="checkbox" value="Camión">Camión
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='al_aire_libre' type="checkbox" value="Al aire libre">Al aire libre
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='quemada' type="checkbox" value="Quemada">Quemada
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name='otros_recoleccion' type="checkbox" value="Otros">Otros
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <button type="submit" class="btn btn-success btn-lg btn-block">Guardar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.col-lg-6 (nested) -->
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
